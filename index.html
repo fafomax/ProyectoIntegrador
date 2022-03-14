@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalized.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Spunky - Servicios para Mascotas</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+               <div class="logo">
+                 <a href="#" ><img src="./assets/logo.png" height="70px" alt=""></a>
+               </div>
+               <input type="checkbox" id="nav-check">
+               <label for="nav-check" class="nav-toggler">
+                  <span></span>
+               </label>
+               <nav class="nav">
+                  <ul>
+                     <li><a href="#principal" class="active"> <img src="./assets/home.svg" alt="Simbolo casa"> Inicio</a></li>
+                     <li><a href="#imagen"> <img src="./assets/image.svg" alt="Simbolo de paginas"> Imagenes</a></li>
+                     <li><a href="#contacto"> <img src="./assets/at-sign.svg" alt="Simbolo de arroba"> Contacto</a></li>
+                     <li><a href="./signup.html"> <img src="./assets/user-plus.svg" alt="Simbolo de usuario"> Registrarse</a></li>
+                     <li><a href="./login.html"> <img src="./assets/log-in.svg" alt="Simbolo inicio"> Iniciar Sesión</a></li>
+                  </ul>
+               </nav>
+            </div>
+        </div>
+     </header>
+
+     <section id="principal" class="principalCard">
+        <div>
+            <h1>Todos los Servicios para tus Mascotas</h1> <img class="perritos" src="./assets/retrato-grupo-adorables-cachorros.png" alt="grupo de perros">
+            <h2>Planes de covertura desde $299/mes</h2>
+
+        </div>
+     </section>
+
+     <section id="imagen" class="imagenSlider">
+         <div class="slider">
+             <ul>
+                 <li><img src="./assets/slider/1510142723_Certificacion_Urgencias_Veterinarias_Quirofanos_Online.jpg" alt=""></li>
+                 <li><img src="./assets/slider/6130de495a5b3444905044.jpg" alt=""></li>
+                 <li><img src="./assets/slider/88711cc9de61562307229e81192749ea.jpg" alt=""></li>
+                 <li><img src="./assets/slider/reducir-estres-de-mascotas-1.jpg" alt=""></li>
+             </ul>
+         </div>
+     </section>
+
+     <section id="contacto" class="contacto">
+         <div class="redesSociales">
+             <h1>Buscanos en nuestras redes Sociales:</h1>
+             <ul>
+                 <li><a href="https://www.facebook.com/fafomax/" target="_blank"><img src="./assets/facebook.svg" alt="logoFacebook"></a></li>
+                 <li><a href="https://www.instagram.com/fafomax/" target="_blank"><img src="./assets/instagram.svg" alt="logoInstagram"></a></li>
+                 <li><a href="https://www.linkedin.com/in/leonardo-d-mora/" target="_blank"><img src="./assets/linkedin.svg" alt="logoLinkedin"></a></li>
+                 <li><a href="https://github.com/fafomax" target="_blank"><img src="./assets/github.svg" alt="logoGithub"></a></li>
+             </ul>
+         </div>
+         <div class="formularioContacto">
+            <form action="">
+                <h2 class="escribenos">Escribenos</h2>
+                <input type="text" name="Nombre" placeholder="Nombre">
+                <input type="email" name="Correo" placeholder="Correo">
+                <input type="number" name="Telefono" placeholder="Telefono">
+                <textarea name="Mensaje" placeholder="Escriba su mensaje"></textarea>
+                <input type="button" value="Enviar" class="boton">
+            </form>
+         </div>
+
+     </section>
+
+     <footer>
+        <div class="footer">
+            <p> ©2022 - Proyecto Integrador diseñado por Leonardo David Mora Vargas para NUCBA Camada 1717</p>
+        </div>
+    </footer>
+</body>
+</html>

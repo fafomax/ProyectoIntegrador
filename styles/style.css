@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+
+:root {
+    --navbar-bg-color: #C48256;
+    --navbar-text-color: #FFB789;
+    --navbar-text-color-focus: #FFE9D0;
+    --navbar-bg-contrast: #005B47;
+    --bg-text: #54433A;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/*Navbar*/
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+
+.nombreLogo{
+    font-size: 4em;
+}
+
+
+  /*header*/
+.header{
+    background-color: var(--navbar-bg-color);
+    position: relative;
+}
+  .header .logo,
+  .header .nav{
+      padding:0 15px;
+  }
+  .header .logo a{
+      font-size: 5px;
+      color: var(--navbar-text-color-focus);
+      text-transform: capitalize;
+  }
+  .header .nav ul li{
+      display: inline-block;
+      margin-left: 40px;
+  }
+  .header .nav ul li a{
+      display: block;
+      font-size: 20px;
+      padding: 15px;
+      color: var(--navbar-text-color);
+      text-transform: capitalize;
+      transition: all 0.5s ease;
+  }
+  .header .nav ul li a:hover,
+  .header .nav ul li a.active{
+      color: var(--navbar-text-color-focus);
+  }
+  .header #nav-check{
+      position: absolute;
+      opacity:0;
+      pointer-events: none;
+  }
+  .nav-toggler{
+      height: 34px;
+      width: 44px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+  }
+  .nav-toggler span{
+      display: block;
+      height: 2px;
+      width: 20px;
+      background-color: var(--bg-text);
+      position: relative;
+  }
+  .nav-toggler span::before,
+  .nav-toggler span::after{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: var(--bg-text);
+     left:0;
+  }
+.nav-toggler span::before{
+    top: -6px;
+}
+.nav-toggler span::after{
+    top: 6px;
+}
+/*Fin de Navbar*/
+
+.principalCard {
+    text-align: center;
+}
+.principalCard h1{
+    margin: 2em;
+    font-size: 50px;
+}
+.principalCard h2{
+    margin: 1em;
+    font-size: 30px;
+}
+
+.perritos{
+    box-shadow: 0em 1em 2em #999;
+}
+
+.imagenSlider {
+    height: 50%;
+}
+/*sliderAnimation*/
+.slider {
+    width: 55%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease-in;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -200%;}
+    100% { margin-left: -200%;}
+}
+/*Fin sliderAnimation*/
+
+.contacto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.redesSociales {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.redesSociales ul {
+    display: flex;
+}
+
+.redesSociales img {
+    width: 5em;
+    margin: 1em;
+    box-sizing: border-box;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background: var(--navbar-bg-color);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.escribenos {
+    color: var(--navbar-text-color-focus);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+
+}
+
+.boton {
+    background: var(--navbar-text-color);
+    color: var(--navbar-text-color-focus);
+    padding: 20px;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 0.7em; 
+    bottom: 0;
+    height: 3em;
+    background: var(--navbar-bg-color);
+    text-align: center;
+    padding-top: 0.7em;
+  }
+
+@media(max-width: 560px){
+    .nav-toggler{
+        display: flex;
+    }
+    .header .nav{
+        position: absolute;
+        left:0;
+        top:100%;
+        width: 100%;
+        background-color: var(--navbar-bg-color);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        opacity:0;
+        visibility: hidden;
+    }
+    .header .nav ul li{
+        display: block;
+        margin:0;
+    }
+    .header #nav-check:checked ~ .nav{
+       opacity: 1;
+       visibility: visible;
+    }
+    .header #nav-check:focus ~ .nav-toggler{
+        box-shadow: 0 0 15px #000000;
+    }
+    .header #nav-check:checked ~ .nav-toggler span{
+        background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+        top:0;
+        transform: rotate(45deg);
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+        top:0;
+        transform: rotate(-45deg);
+    }
+
+    .principalCard {
+        width: 100%;
+    }
+
+    .principalCard h1{
+        font-size: 40px;
+    }
+
+    .principalCard img {
+        width: 100%;
+    }
+
+    .contacto  {
+        display: block;
+    }
+    .redesSociales img{
+        margin: 0%;
+    }
+
+    form { 
+        width: 100%;
+    }
+
+    footer {
+        bottom: 0;
+        height: 5em;
+    }
+ }
